@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritz Society</title>
+  <link rel="icon" href="ritz.png" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* General Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+    body { background: linear-gradient(to right, #ff6f00, #ff9e00); color: #fff; }
+    header, footer { text-align: center; padding: 2rem; background-color: rgba(0,0,0,0.2); }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1rem 0; }
+    nav a { background: white; color: #ff6f00; padding: 1rem 1.5rem; border-radius: 30px; text-decoration: none; }
+    nav a:hover { background: #ffe0b2; transform: scale(1.05); }
+    section { padding: 2rem; max-width: 800px; margin: auto; }
+    h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
+    input, textarea, select { padding: 1rem; border-radius: 10px; border: none; width: 100%; font-size: 1rem; }
+    button { background: white; color: #ff6f00; font-weight: bold; padding: 1rem; border: none; border-radius: 10px; margin-top: 10px; cursor: pointer; }
+    button:hover { transform: scale(1.05); }
+    .form-section form { display: flex; flex-direction: column; gap: 1rem; }
+    .message { text-align: center; font-size: 1.1rem; font-weight: bold; }
+    ul { list-style: none; padding-left: 0; text-align: center; }
+    li { margin: 0.5rem 0; }
+
+    @media (max-width: 600px) {
+      nav a { padding: 0.8rem 1.2rem; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Ritz Society</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#rent">Rent</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#notices">Notices</a>
+    <a href="#depart">Departure Notice</a>
+    <a href="#maintenance">Maintenance</a>
+    <a href="#events">Events</a>
+    <a href="#docs">Documents</a>
+    <a href="#faq">FAQs</a>
+    <a href="#profile">My Info</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>🏡 About Ritz Society</h2>
+    <p style="text-align:center;">Community-driven, secure and stylish living for tenants.</p>
+  </section>
+
+  <section id="rent">
+    <h2>💰 Rent Info</h2>
+    <p style="text-align:center;">Payable by the 1st monthly.<br>Account Name: The Hsueh Family Trust<br>Account Number: *******4342</p>
+  </section>
+
+  <section id="amenities">
+    <h2>🏢 Amenities</h2>
+    <ul>
+      <li>✔ Free WiFi</li>
+      <li>✔ 24/7 Security</li>
+      <li>✔ Weekly Cleaning</li>
+      <li>✔ Secure Parking</li>
+    </ul>
+  </section>
+
+  <section id="notices">
+    <h2>📢 Community Notices</h2>
+    <p style="text-align:center;">🌱 Please minimize water use. Maintenance day: Friday.</p>
+  </section>
+
+  <section id="depart">
+    <h2>📤 Submit Departure Notice</h2>
+    <div class="form-section">
+      <form class="tenant-form" data-form="departure">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="date" name="departure_date" required />
+        <textarea name="reason" placeholder="Reason for leaving..." rows="4" required></textarea>
+        <button type="submit">Submit Departure Notice</button>
+        <div class="message"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="maintenance">
+    <h2>🔧 Maintenance Request</h2>
+    <div class="form-section">
+      <form class="tenant-form" data-form="maintenance">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="room" placeholder="Room Number" required />
+        <textarea name="issue" placeholder="Describe the issue..." rows="4" required></textarea>
+        <button type="submit">Request Maintenance</button>
+        <div class="message"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="events">
+    <h2>🎉 Upcoming Events</h2>
+    <ul>
+      <li>🗓 Monthly Braai – Last Friday of every month</li>
+      <li>🗓 Spring Cleaning Drive – October</li>
+    </ul>
+  </section>
+
+  <section id="docs">
+    <h2>📄 Tenant Documents</h2>
+    <ul>
+      <li><a href="lease.pdf" target="_blank">📥 Download Lease Agreement</a></li>
+      <li><a href="rules.pdf" target="_blank">📥 Download House Rules</a></li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>❓ FAQs</h2>
+    <ul>
+      <li><strong>Q:</strong> Can I host guests? <br><strong>A:</strong> Yes, up to 2 overnight guests allowed.</li>
+      <li><strong>Q:</strong> How do I request maintenance? <br><strong>A:</strong> Use the form above!</li>
+    </ul>
+  </section>
+
+  <section id="profile">
+    <h2>👤 My Info</h2>
+    <div class="form-section">
+      <form class="tenant-form" data-form="profile">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <button type="submit">Update Info</button>
+        <div class="message"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📬 Contact Management</h2>
+    <div class="form-section">
+      <form class="tenant-form" data-form="contact">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Message for Dave" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+        <div class="message"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Developed by <strong>Parables & Platters Software</strong></p>
+    <p>&copy; 2025 Ritz Society | Managed by Dave</p>
+  </footer>
+
+  <script>
+    const forms = document.querySelectorAll('.tenant-form');
+
+    forms.forEach(form => {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const messageDiv = form.querySelector('.message');
+        messageDiv.style.color = '#fff';
+        messageDiv.textContent = 'Submitting...';
+
+        const formData = new FormData(form);
+        try {
+          const res = await fetch("https://formspree.io/f/mjkwzkjg", {
+            method: "POST",
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            messageDiv.style.color = '#00ffae';
+            messageDiv.textContent = '✅ Submitted successfully!';
+            form.reset();
+          } else {
+            messageDiv.style.color = '#ff4d4d';
+            messageDiv.textContent = '❌ Submission failed.';
+          }
+        } catch (err) {
+          messageDiv.style.color = '#ff4d4d';
+          messageDiv.textContent = '⚠️ Network error.';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
