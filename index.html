@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Ritz Society</title>
+
   <link rel="icon" href="ritz.png" type="image/jpeg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
+
     /* General Styles */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
     body { background: linear-gradient(to right, #ff6f00, #ff9e00); color: #fff; }
@@ -30,9 +40,13 @@
     li { margin: 0.5rem 0; }
 
     @media (max-width: 600px) {
+
       nav a { padding: 0.8rem 1.2rem; font-size: 0.9rem; }
+
     }
+
   </style>
+
 </head>
 
 <body>
@@ -44,19 +58,19 @@
     <a href="#about">About</a>
     <a href="#rent">Rent</a>
     <a href="#amenities">Amenities</a>
-    <a href="#notices">Notices</a>
+    <a href="#notices">To Serve Notice</a>
     <a href="#depart">Departure Notice</a>
     <a href="#maintenance">Maintenance</a>
     <a href="#events">Events</a>
-    <a href="#docs">Documents</a>
     <a href="#faq">FAQs</a>
-    <a href="#profile">My Info</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
-    <h2>🏡 About Ritz Society</h2>
-    <p style="text-align:center;">Community-driven, secure and stylish living for tenants.</p>
+    <h2>🏡 About Hotel Ritz</h2>
+    <p style="text-align:center;">Community-driven, secure and stylish living for tenants. Owned by the Hsueh Family, and managed on a daily basis by Dave.</p>
+    <br>
+    <p>Located on Joseph Ntuli Rd, Durban, KwaZulu-Natal, South Africa.</p>
   </section>
 
   <section id="rent">
@@ -68,9 +82,13 @@
     <h2>🏢 Amenities</h2>
     <ul>
       <li>✔ Free WiFi</li>
+      <li>✔ Entertainment Room</li>
+      <li>✔ Expansive Kitchen</li>
+      <li>✔ Deep Freezers</li>
+      <li>✔ Microwaves</li>
       <li>✔ 24/7 Security</li>
-      <li>✔ Weekly Cleaning</li>
-      <li>✔ Secure Parking</li>
+      <li>✔ Daily Cleaning</li>
+      <li>✔ Laundry Lines</li>
     </ul>
   </section>
 
@@ -85,6 +103,7 @@
       <form class="tenant-form" data-form="departure">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="room" placeholder="Room Number" required />
         <input type="date" name="departure_date" required />
         <textarea name="reason" placeholder="Reason for leaving..." rows="4" required></textarea>
         <button type="submit">Submit Departure Notice</button>
@@ -98,6 +117,7 @@
     <div class="form-section">
       <form class="tenant-form" data-form="maintenance">
         <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="room" placeholder="Room Number" required />
         <textarea name="issue" placeholder="Describe the issue..." rows="4" required></textarea>
         <button type="submit">Request Maintenance</button>
@@ -109,38 +129,19 @@
   <section id="events">
     <h2>🎉 Upcoming Events</h2>
     <ul>
-      <li>🗓 Monthly Braai – Last Friday of every month</li>
-      <li>🗓 Spring Cleaning Drive – October</li>
-    </ul>
-  </section>
-
-  <section id="docs">
-    <h2>📄 Tenant Documents</h2>
-    <ul>
-      <li><a href="lease.pdf" target="_blank">📥 Download Lease Agreement</a></li>
-      <li><a href="rules.pdf" target="_blank">📥 Download House Rules</a></li>
+      <li>🗓 Any ideas?</li>
     </ul>
   </section>
 
   <section id="faq">
     <h2>❓ FAQs</h2>
     <ul>
-      <li><strong>Q:</strong> Can I host guests? <br><strong>A:</strong> Yes, up to 2 overnight guests allowed.</li>
-      <li><strong>Q:</strong> How do I request maintenance? <br><strong>A:</strong> Use the form above!</li>
+      <li><strong>Q:</strong> Can I host guests? <br><br><strong>A:</strong> Yes, guests are allowed during the day from 10:00am to 20:00pm, and overnight guests are allowed at R100 per night. Please contact Dave for more info.</li>
+      <br>
+      <p>--</p>
+      <br>
+      <li><strong>Q:</strong> How do I request maintenance? <br><br><strong>A:</strong> Use the form above!</li>
     </ul>
-  </section>
-
-  <section id="profile">
-    <h2>👤 My Info</h2>
-    <div class="form-section">
-      <form class="tenant-form" data-form="profile">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <button type="submit">Update Info</button>
-        <div class="message"></div>
-      </form>
-    </div>
   </section>
 
   <section id="contact">
@@ -149,6 +150,7 @@
       <form class="tenant-form" data-form="contact">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="room" placeholder="Room Number" required />
         <textarea name="message" placeholder="Message for Dave" rows="5" required></textarea>
         <button type="submit">Send Message</button>
         <div class="message"></div>
@@ -162,6 +164,7 @@
   </footer>
 
   <script>
+
     const forms = document.querySelectorAll('.tenant-form');
 
     forms.forEach(form => {
@@ -193,9 +196,23 @@
         }
       });
     });
+
   </script>
+
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
